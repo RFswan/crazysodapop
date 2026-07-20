@@ -1,0 +1,7 @@
+[2026-07-20T22:53:24.039Z] Collection page 1: https://www.sodapoponline.com/collections/soda-of-the-month-subscription
+[2026-07-20T22:53:26.175Z] Collection failed: https://www.sodapoponline.com/collections/soda-of-the-month-subscription: page.goto: net::ERR_ABORTED at https://www.sodapoponline.com/collections/soda-of-the-month-subscription
+Call log:
+[2m  - navigating to "https://www.sodapoponline.com/collections/soda-of-the-month-subscription", waiting until "domcontentloaded"[22m
+
+[2026-07-20T22:53:26.177Z] Collection failed: https://www.sodapoponline.com/collections/all: browserContext.newPage: Target page, context or browser has been closed
+[2026-07-20T22:53:26.178Z] Soda Pop Online: 0 unique product URLs queued.
