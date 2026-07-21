@@ -1,54 +1,32 @@
-\# Visual Priority
-
-
+# Visual Priority
 
 Use visual references in this order:
 
+1. `01_APPROVED_HOMEPAGE_DIRECTION.png` — homepage layout and composition
+2. `03_APPROVED_LOGO.png` — production header logo (Homepage v1)
+3. `02_APPROVED_BRAND_GUIDE.png` — color, type, and identity direction
+4. Approved product photography
+5. Approved packaging photography
+6. Supporting UX references
+7. Competitor screenshots (never copy branding or layouts)
 
+## Override Rule
 
-1\. `01\_APPROVED\_HOMEPAGE\_DIRECTION.png`
+`00_Master/Final_Business_Decisions.md` overrides every visual reference.
 
-2\. `02\_APPROVED\_BRAND\_GUIDE.png`
-
-3\. Approved product photography
-
-4\. Approved packaging photography
-
-5\. Supporting UX references
-
-6\. Competitor screenshots
-
-
-
-\## Override Rule
-
-
-
-`00\_Master/Final\_Business\_Decisions.md` overrides every visual reference.
-
-
-
-\## Cursor Rules
-
-
+## Cursor Rules
 
 Cursor must not:
 
+- Invent branding
+- Invent pricing
+- Invent product claims
+- Invent testimonials or star ratings
+- Invent branded subscription packaging
+- Copy competitor branding, copywriting, photography, icons, or distinctive layouts
 
+Cursor may adapt the approved homepage reference into responsive Shopify sections while preserving approved visual character and business hierarchy.
 
-\- Invent branding
+## Logo
 
-\- Invent pricing
-
-\- Invent product claims
-
-\- Invent testimonials
-
-\- Invent branded packaging
-
-\- Copy competitor branding, copywriting, photography, icons, or distinctive layouts
-
-
-
-Cursor may adapt the approved homepage reference into responsive Shopify sections, but must preserve the approved visual character and business hierarchy.
-
+Homepage v1 storefront header uses **`03_APPROVED_LOGO.png`**. Implement via Shopify editable logo image setting; do not hardcode logo text in theme Liquid.

@@ -21,12 +21,14 @@ Do **not** use **“The Soda Discovery Co.”** as the subscription name (includ
 
 ---
 
-## Logo (provisional)
+## Logo (Homepage v1 — approved production asset)
 
-- Reference PNGs show **exploratory lockups only** (crest with ribbon text, and alternate homepage script/block treatment with **SODA & CANDY CO.** subline).
-- **Production logo wording is not finalized.**
-- Implement only an **editable Shopify logo image setting**—no baked-in logo text in theme markup.
-- Do not embed any reference PNG ribbon text as the canonical subscription name.
+**Approved production logo:** `14_Reference/Approved_Visuals/03_APPROVED_LOGO.png`
+
+- Lockup: script **CRAZY**, block **SODA POP** (bubble pattern), subline **SODA & CANDY CO.** — parent brand mark, not the subscription program name.
+- Older references (`02_APPROVED_BRAND_GUIDE.png` crest / **THE SODA DISCOVERY CO.** ribbon, homepage mockup lockup) are **superseded** by `03_APPROVED_LOGO.png` for header and storefront logo use.
+- Theme: upload this asset in Shopify (or ship a copy under `assets/`) and expose it through an **editable logo image setting**—no subscription name or logo copy baked into Liquid/HTML.
+- Do **not** use **“The Soda Discovery Co.”** as the subscription name anywhere on site copy.
 
 ---
 

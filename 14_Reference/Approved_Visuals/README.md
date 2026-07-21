@@ -1,78 +1,49 @@
-\# Approved Visuals
-
-
+# Approved Visuals
 
 This folder contains the controlling visual references for the Crazy Soda Pop Shopify project.
 
+## Required Assets
 
+### 01_APPROVED_HOMEPAGE_DIRECTION.png
 
-\## Required Assets
+Highest-authority **layout and composition** reference for Homepage v1.
 
+Use for:
 
+- Overall homepage mood
+- Hero composition
+- Section hierarchy and button treatment
+- Premium nostalgic character
+- Desktop visual direction
 
-\### 01\_APPROVED\_HOMEPAGE\_DIRECTION.png
+Written business decisions override inaccurate mockup text (nav labels, shipping claims, ratings, etc.).
 
+### 02_APPROVED_BRAND_GUIDE.png
 
+Controlling **identity** reference for colors, typography direction, and brand voice context.
 
-This is the highest-authority layout and composition reference for Homepage v1.
+Use for:
 
+- Brand colors (hex in Brand Bible)
+- Typography (Playfair Display, Oswald, Lato)
+- Supporting graphic style
 
+The crest lockup in this file is **not** the Homepage v1 header logo—use `03_APPROVED_LOGO.png` instead.
 
-Cursor should use it for:
+### 03_APPROVED_LOGO.png
 
+**Approved production logo for Homepage v1.**
 
+Use for:
 
-\- Overall homepage mood
+- Header / site logo
+- Default theme logo image setting reference
+- Favicon source (optional crop)
 
-\- Hero composition
+Lockup includes **SODA & CANDY CO.** as parent-brand subline. Do **not** rename the subscription to match legacy ribbon text from other references (**The Soda Discovery Co.** is prohibited). Subscription program name remains **The Soda Discovery Club** in copy and navigation.
 
-\- Red, cream, teal, and dark text balance
+## Important Rule
 
-\- Section hierarchy
-
-\- Button treatment
-
-\- Premium nostalgic character
-
-\- Desktop visual direction
-
-
-
-Cursor must not treat every detail in the image as final product truth. The written business decisions override any inaccurate text, product image, price, shipping claim, or navigation shown in the mockup.
-
-
-
-\### 02\_APPROVED\_BRAND\_GUIDE.png
-
-
-
-This is the controlling identity reference.
-
-
-
-Cursor should use it for:
-
-
-
-\- Brand colors
-
-\- Typography direction
-
-\- Logo direction
-
-\- Supporting graphic style
-
-\- Visual consistency
-
-
-
-\## Important Rule
-
-
-
-Written source-of-truth documents override visuals whenever there is a conflict.
-
-
+`00_Master/Final_Business_Decisions.md` overrides every visual reference when there is a conflict.
 
 Competitor screenshots are reference only.
-

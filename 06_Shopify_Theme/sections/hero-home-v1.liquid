@@ -1,0 +1,175 @@
+{{ 'crazy-soda-pop.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  id="CSP-Hero-{{ section.id }}"
+  class="csp-section csp-section--navy csp-hero section-{{ section.id }}-padding"
+>
+  <div class="page-width">
+    <div class="csp-hero__grid">
+      <div class="csp-hero__content">
+        {%- if section.settings.headline != blank -%}
+          <h1 class="csp-hero__headline">{{ section.settings.headline | escape }}</h1>
+        {%- endif -%}
+        {%- if section.settings.supporting_line != blank -%}
+          <p class="csp-hero__supporting">{{ section.settings.supporting_line | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <div class="csp-hero__body rte">{{ section.settings.body }}</div>
+        {%- endif -%}
+        <div class="csp-hero__actions">
+          {%- if section.settings.primary_label != blank -%}
+            <a
+              class="csp-btn csp-btn--primary"
+              {% if section.settings.primary_link != blank %}
+                href="{{ section.settings.primary_link }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+            >
+              {{ section.settings.primary_label | escape }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.secondary_label != blank -%}
+            <a
+              class="csp-btn csp-btn--secondary"
+              {% if section.settings.secondary_link != blank %}
+                href="{{ section.settings.secondary_link }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+            >
+              {{ section.settings.secondary_label | escape }}
+            </a>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.disclaimer != blank -%}
+          <p class="caption">{{ section.settings.disclaimer | escape }}</p>
+        {%- endif -%}
+      </div>
+      <div class="csp-hero__media">
+        {%- if section.settings.image != blank -%}
+          {%- assign hero_alt = section.settings.image.alt | default: section.settings.headline | escape -%}
+          {{
+            section.settings.image
+            | image_url: width: 1500
+            | image_tag:
+              loading: 'eager',
+              fetchpriority: 'high',
+              sizes: '(min-width: 990px) 50vw, 100vw',
+              widths: '375, 550, 750, 1100, 1500',
+              alt: hero_alt,
+              class: 'csp-hero__image'
+          }}
+        {%- else -%}
+          <div class="csp-hero__placeholder media" style="aspect-ratio: 4/3; background: rgba(255,255,255,0.08);">
+            <span class="visually-hidden">Hero image placeholder</span>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CSP Hero (Home v1)",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "New Soda. Every Month. Delivered To Your Door."
+    },
+    {
+      "type": "text",
+      "id": "supporting_line",
+      "label": "Supporting line",
+      "default": "Remember when soda was exciting?"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Choose a 6-bottle or 12-bottle Soda Discovery Club plan, or shop specialty sodas without subscribing.</p>"
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary button label",
+      "default": "Start Your First Box"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary button label",
+      "default": "Shop Soda"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "Cancel anytime. Pause or skip anytime.",
+      "info": "Show only if accurate for your subscription app."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image",
+      "info": "Use honest kraft box and glass bottle photography. No fake branded club cartons."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "CSP Hero (Home v1)"
+    }
+  ]
+}
+{% endschema %}

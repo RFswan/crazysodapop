@@ -57,9 +57,9 @@ Load via Shopify font picker or approved webfont pipeline; do not substitute typ
 
 ### Logo and favicon
 
-- **Provisional logo artwork**; production logo wording **not finalized**.
-- Image pickers for header logo (and optional alternate lockup)—**no logo text in Liquid/HTML**.
-- Favicon image picker.
+- **Approved production logo (Homepage v1):** `14_Reference/Approved_Visuals/03_APPROVED_LOGO.png` — default reference for header; upload to theme `assets/` or Shopify Files and assign via logo image picker.
+- Image pickers for header logo—**no logo text in Liquid/HTML**.
+- Favicon image picker (may use same asset or separate mark).
 
 ### Spacing and buttons
 
@@ -180,7 +180,7 @@ Menu blocks for FAQ, Contact, Shipping, Policies.
 | Approved marketplace reviews | **Not supplied** |
 | FAQ copy | TBD |
 | Legal pages | `12_Legal` when available |
-| Final logo asset | **Provisional** |
+| Production logo file | `14_Reference/Approved_Visuals/03_APPROVED_LOGO.png` |
 
 ---
 

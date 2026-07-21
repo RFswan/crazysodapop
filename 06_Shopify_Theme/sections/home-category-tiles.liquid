@@ -1,0 +1,167 @@
+{{ 'crazy-soda-pop.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="csp-section csp-section--cream csp-tiles section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="csp-tiles__grid">
+      {%- for block in section.blocks -%}
+        <article class="csp-tile" {{ block.shopify_attributes }}>
+          <div class="csp-tile__media">
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag:
+                  loading: 'lazy',
+                  sizes: '(min-width: 990px) 25vw, (min-width: 750px) 50vw, 100vw',
+                  widths: '275, 550, 750, 800',
+                  alt: block.settings.title
+              }}
+            {%- else -%}
+              <div style="background: rgba(var(--csp-warm-tan), 0.5); height: 100%; min-height: 12rem;"></div>
+            {%- endif -%}
+          </div>
+          <div class="csp-tile__body">
+            {%- if block.settings.title != blank -%}
+              <h3 class="csp-tile__title">{{ block.settings.title | escape }}</h3>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="csp-tile__text">{{ block.settings.text | escape }}</p>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <div class="csp-tile__link">
+                <a
+                  class="csp-btn {% if block.settings.button_style == 'red' %}csp-btn--primary{% else %}csp-btn--teal{% endif %}"
+                  {% if block.settings.link != blank %}
+                    href="{{ block.settings.link }}"
+                  {% elsif block.settings.collection != blank %}
+                    href="{{ block.settings.collection.url }}"
+                  {% else %}
+                    role="link" aria-disabled="true"
+                  {% endif %}
+                >
+                  {{ block.settings.button_label | escape }}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CSP Category tiles (4-up)",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tile",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Shop Soda" },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Browse all sodas, root beers, snacks, merch & more."
+        },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "collection", "id": "collection", "label": "Collection link (optional)" },
+        { "type": "url", "id": "link", "label": "Custom link (overrides collection)" },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop now" },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "teal", "label": "Teal" },
+            { "value": "red", "label": "Red" }
+          ],
+          "default": "teal"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CSP Category tiles (4-up)",
+      "blocks": [
+        {
+          "type": "tile",
+          "settings": {
+            "title": "Shop Soda",
+            "text": "Browse all sodas, root beers, snacks, merch & more.",
+            "button_label": "Shop now",
+            "button_style": "teal"
+          }
+        },
+        {
+          "type": "tile",
+          "settings": {
+            "title": "Build a Pack",
+            "text": "Handpick your favorites and build your perfect pack.",
+            "button_label": "Build your pack",
+            "button_style": "teal"
+          }
+        },
+        {
+          "type": "tile",
+          "settings": {
+            "title": "Soda Discovery Club",
+            "text": "6 or 12 new bottles every month. Cancel anytime.",
+            "button_label": "Join the club",
+            "button_style": "red"
+          }
+        },
+        {
+          "type": "tile",
+          "settings": {
+            "title": "Candy",
+            "text": "Sweeten your soda experience. Classic favorites & retro treats.",
+            "button_label": "Shop candy",
+            "button_style": "teal"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

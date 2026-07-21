@@ -45,7 +45,7 @@ Right-aligned icons (as shown in mockup):
 - Account
 - Cart (with item count badge when applicable)
 
-**Logo:** Left-aligned; **provisional artwork** via editable Shopify image setting only (`01_Brand/Brand_Bible.md`).
+**Logo:** Left-aligned; approved production asset `14_Reference/Approved_Visuals/03_APPROVED_LOGO.png` (see `01_Brand/Brand_Bible.md`), rendered via editable Shopify logo image setting.
 
 ---
 

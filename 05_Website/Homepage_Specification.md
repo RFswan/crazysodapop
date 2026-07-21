@@ -49,7 +49,7 @@ Visitors should understand:
 ### 2. Header and navigation
 
 - Mockup: dark navy header with star/sparkle texture optional.
-- Logo: **provisional**, editable image only.
+- Logo: approved production asset `03_APPROVED_LOGO.png`, editable image setting (no logo text in markup).
 - Nav: frozen v1 labels (`05_Website/Navigation.md`).
 - Utilities: search, account, cart.
 
@@ -202,5 +202,5 @@ Est. / Since / Established 2026; fake history; fake testimonials; unsupported sc
 | Hero title emphasis | Club as dominant display type | Frozen hero headline + supporting line |
 | Shipping | All orders free | $39+ merchandise + subscription rules |
 | Star badge | 4.7★ shown | **Prohibited until approved source** |
-| Logo ribbon | THE SODA DISCOVERY CO. | **The Soda Discovery Club**; logo provisional |
+| Legacy brand-guide ribbon | THE SODA DISCOVERY CO. | Do not use as subscription name; header logo = **03_APPROVED_LOGO.png** |
 | Four-column band order | Shop / Build / Subscriptions / Candy in one row | Blueprint order splits narrative; grid may group tiles visually |

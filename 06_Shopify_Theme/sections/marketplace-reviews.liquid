@@ -1,0 +1,131 @@
+{{ 'crazy-soda-pop.css' | asset_url | stylesheet_tag }}
+
+{%- if section.blocks.size == 0 and section.settings.hide_when_empty -%}
+  {%- comment -%} No approved marketplace reviews yet {%- endcomment -%}
+{%- else -%}
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <section class="csp-section csp-section--cream csp-reviews section-{{ section.id }}-padding">
+    <div class="page-width">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="h1 center">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="center">{{ section.settings.subheading | escape }}</p>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="grid grid--1-col grid--2-col-tablet" style="margin-top: 2rem; gap: 2rem;">
+          {%- for block in section.blocks -%}
+            <blockquote class="csp-reviews__item" {{ block.shopify_attributes }}>
+              {%- if block.settings.quote != blank -%}
+                <p class="csp-reviews__quote">“{{ block.settings.quote | escape }}”</p>
+              {%- endif -%}
+              {%- if block.settings.author != blank -%}
+                <footer class="csp-reviews__author">{{ block.settings.author | escape }}</footer>
+              {%- endif -%}
+              {%- if block.settings.source_label != blank -%}
+                <p class="caption">{{ block.settings.source_label | escape }}</p>
+              {%- endif -%}
+            </blockquote>
+          {%- endfor -%}
+        </div>
+      {%- elsif section.settings.empty_message != blank -%}
+        <p class="center caption" style="margin-top: 2rem;">{{ section.settings.empty_message | escape }}</p>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CSP Marketplace reviews",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_when_empty",
+      "label": "Hide section when no review blocks",
+      "default": true,
+      "info": "Keep enabled until approved marketplace reviews are added as blocks."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Customers Say About Crazy Soda Pop"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Marketplace reviews about Crazy Soda Pop—not The Soda Discovery Club unless noted."
+    },
+    {
+      "type": "text",
+      "id": "empty_message",
+      "label": "Message when empty (if section visible)",
+      "default": "Reviews will appear here when approved marketplace content is added."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "info": "Approved marketplace text only."
+        },
+        { "type": "text", "id": "author", "label": "Author name" },
+        {
+          "type": "text",
+          "id": "source_label",
+          "label": "Source label",
+          "default": "Marketplace review"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CSP Marketplace reviews",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

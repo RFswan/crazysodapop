@@ -68,4 +68,6 @@ When any files disagree, use this order (lower numbers win over higher numbers):
 
 ## Logo
 
-Logo artwork is **provisional**. Production logo wording is **not finalized**. The live theme must use an **editable logo image setting** only—not baked-in logo text.
+**Approved production logo (Homepage v1):** `14_Reference/Approved_Visuals/03_APPROVED_LOGO.png`
+
+Theme asset: `06_Shopify_Theme/assets/logo-crazy-soda-pop.png`. Assign via **Theme settings → Logo** in Shopify Admin, or use the theme’s asset fallback when the setting is empty. Do **not** bake logo text into Liquid/HTML.

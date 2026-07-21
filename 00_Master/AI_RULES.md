@@ -75,15 +75,13 @@ Do not use:
 
 ## Logo Rule
 
-Logo artwork is **provisional**. Production logo wording is **not finalized**.
+**Approved production logo (Homepage v1):** `14_Reference/Approved_Visuals/03_APPROVED_LOGO.png` (theme asset: `assets/logo-crazy-soda-pop.png`).
 
-Do not permanently embed logo text or artwork into layouts.
-
-Logo areas must accept **editable Shopify image settings** only.
+Use the theme **logo image setting** in Shopify Admin; do not permanently embed logo text in layouts. Asset fallback may display when the setting is empty during development.
 
 Do not use “EST. 2026.”
 
-Do not treat ribbon or subline text in reference PNGs as final subscription naming.
+Do not treat ribbon text from older brand-guide artwork as the subscription name.
 
 ## Copy Rules
 

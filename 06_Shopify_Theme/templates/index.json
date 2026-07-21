@@ -1,0 +1,192 @@
+{
+  "sections": {
+    "csp_hero": {
+      "type": "hero-home-v1",
+      "settings": {
+        "headline": "New Soda. Every Month. Delivered To Your Door.",
+        "supporting_line": "Remember when soda was exciting?",
+        "body": "<p>Choose a 6-bottle or 12-bottle Soda Discovery Club plan, or shop specialty sodas without subscribing.</p>",
+        "primary_label": "Start Your First Box",
+        "secondary_label": "Shop Soda",
+        "disclaimer": "Cancel anytime. Pause or skip anytime.",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "csp_social_proof": {
+      "type": "social-proof-strip",
+      "blocks": {
+        "statement_1": {
+          "type": "statement",
+          "settings": {
+            "text": "100,000+ Orders Shipped"
+          }
+        },
+        "statement_2": {
+          "type": "statement",
+          "settings": {
+            "text": "Free Shipping Over $39"
+          }
+        },
+        "statement_3": {
+          "type": "statement",
+          "settings": {
+            "text": "Free Shipping on Every Subscription"
+          }
+        }
+      },
+      "block_order": ["statement_1", "statement_2", "statement_3"],
+      "settings": {
+        "light_background": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "csp_tiles": {
+      "type": "home-category-tiles",
+      "blocks": {
+        "tile_shop": {
+          "type": "tile",
+          "settings": {
+            "title": "Shop Soda",
+            "text": "Browse all sodas, root beers, snacks, merch & more.",
+            "button_label": "Shop now",
+            "button_style": "teal"
+          }
+        },
+        "tile_build": {
+          "type": "tile",
+          "settings": {
+            "title": "Build a Pack",
+            "text": "Handpick your favorites and build your perfect pack.",
+            "button_label": "Build your pack",
+            "button_style": "teal"
+          }
+        },
+        "tile_club": {
+          "type": "tile",
+          "settings": {
+            "title": "Soda Discovery Club",
+            "text": "6 or 12 new bottles every month. Cancel anytime.",
+            "button_label": "Join the club",
+            "button_style": "red"
+          }
+        },
+        "tile_candy": {
+          "type": "tile",
+          "settings": {
+            "title": "Candy",
+            "text": "Sweeten your soda experience. Classic favorites & retro treats.",
+            "button_label": "Shop candy",
+            "button_style": "teal"
+          }
+        }
+      },
+      "block_order": ["tile_shop", "tile_build", "tile_club", "tile_candy"],
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "csp_how_it_works": {
+      "type": "club-how-it-works",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "You join",
+            "text": "Choose your plan and start your soda adventure."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "We curate",
+            "text": "We handpick 6 or 12 unique bottles you won't find in stores."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "You discover",
+            "text": "Unbox, enjoy, and discover something new every month."
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3"],
+      "settings": {
+        "heading": "How the club works",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "csp_packaging_trust": {
+      "type": "packaging-shipping-trust",
+      "blocks": {
+        "trust_1": {
+          "type": "trust_item",
+          "settings": {
+            "title": "Plain shipping box",
+            "text": "Functional corrugated packaging with bubble wrap—no fake branded club cartons."
+          }
+        },
+        "trust_2": {
+          "type": "trust_item",
+          "settings": {
+            "title": "Free shipping over $39",
+            "text": "Merchandise orders of $39 or more ship free in the continental United States."
+          }
+        },
+        "trust_3": {
+          "type": "trust_item",
+          "settings": {
+            "title": "Club shipping included",
+            "text": "Every Soda Discovery Club subscription includes free shipping in the continental U.S."
+          }
+        }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3"],
+      "settings": {
+        "heading": "Honest packaging. Clear shipping.",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "csp_reviews": {
+      "type": "marketplace-reviews",
+      "settings": {
+        "hide_when_empty": true,
+        "heading": "What Customers Say About Crazy Soda Pop",
+        "subheading": "Marketplace reviews about Crazy Soda Pop—not The Soda Discovery Club unless noted."
+      }
+    },
+    "csp_faq": {
+      "type": "faq-home",
+      "settings": {
+        "heading": "FAQ",
+        "color_scheme": "scheme-2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "csp_email": {
+      "type": "email-signup-home",
+      "settings": {
+        "heading": "Stay in the loop",
+        "text": "<p>Get updates on new sodas, packs, and club news.</p>",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "csp_hero",
+    "csp_social_proof",
+    "csp_tiles",
+    "csp_how_it_works",
+    "csp_packaging_trust",
+    "csp_reviews",
+    "csp_faq",
+    "csp_email"
+  ]
+}
